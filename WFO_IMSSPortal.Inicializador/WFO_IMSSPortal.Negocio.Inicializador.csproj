@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DFF58996-5047-4C8D-BA45-E233726C919E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WFO_IMSSPortal.Negocio.Inicializador</RootNamespace>
+    <AssemblyName>WFO_IMSSPortal.Negocio.Inicializador</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Inicializador.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WFO_IMSSPortal.IU\WFO_IMSSPortal.IU.csproj">
+      <Project>{fbf8c1f6-69d6-45d5-9cf1-49cdfeda0169}</Project>
+      <Name>WFO_IMSSPortal.IU</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WFO_IMSSPortal.Negocio.Catalogos\WFO_IMSSPortal.Negocio.Catalogos.csproj">
+      <Project>{c2974cb1-028c-4c8e-a7b0-e00eeca6b86e}</Project>
+      <Name>WFO_IMSSPortal.Negocio.Catalogos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WFO_IMSSPortal.Negocio.Procesos.IMSSPortal\WFO_IMSSPortal.Negocio.Procesos.IMSSPortal.csproj">
+      <Project>{8cc0f731-611d-4d03-bc8f-1ef545169077}</Project>
+      <Name>WFO_IMSSPortal.Negocio.Procesos.IMSSPortal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WFO_IMSSPortal.Negocio.Procesos.Operacion\WFO_IMSSPortal.Negocio.Procesos.Operacion.csproj">
+      <Project>{e25682b0-850c-42fe-a836-eca3bb51cdf8}</Project>
+      <Name>WFO_IMSSPortal.Negocio.Procesos.Operacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WFO_IMSSPortal.Negocio.Procesos.Promotoria\WFO_IMSSPortal.Negocio.Procesos.Promotoria.csproj">
+      <Project>{d018aa1e-d129-4f2f-8ddf-6d5b2832d4ec}</Project>
+      <Name>WFO_IMSSPortal.Negocio.Procesos.Promotoria</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WFO_IMSSPortal.Negocio.Procesos.SupervisionGeneral\WFO_IMSSPortal.Negocio.Procesos.SupervisionGeneral.csproj">
+      <Project>{001550e3-c9e5-4c9b-9809-95bb3e3799ed}</Project>
+      <Name>WFO_IMSSPortal.Negocio.Procesos.SupervisionGeneral</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WFO_IMSSPortal.Negocio.Procesos.Supervision\WFO_IMSSPortal.Negocio.Procesos.Supervision.csproj">
+      <Project>{1d08c9f0-1009-45ca-8ba5-5c22674a61c1}</Project>
+      <Name>WFO_IMSSPortal.Negocio.Procesos.Supervision</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WFO_IMSSPortal.Negocio.Sistema\WFO_IMSSPortal.Negocio.Sistema.csproj">
+      <Project>{abb698e8-c882-4ef5-a427-d93fa14e8544}</Project>
+      <Name>WFO_IMSSPortal.Negocio.Sistema</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
